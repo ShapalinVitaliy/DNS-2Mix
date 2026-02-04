@@ -32,30 +32,31 @@
 
 # Весь объем загружаемых файлов может быть излишним.
 # При необходимости, загружайте данные частично, комментируя нужные строки
+
 # Словом Skip помечены разделы и номера файлов, которые не используются при обработке.
 # Их можно не загружать
 
 BLOB_NAMES=(
     #Emotional speech set
-    #clean_fullband/datasets_fullband.clean_fullband.emotional_speech_000_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.emotional_speech_000_NA_NA.tar.bz2
 
     #French speech set
-    #clean_fullband/datasets_fullband.clean_fullband.french_speech_000_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.french_speech_001_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.french_speech_002_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.french_speech_003_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.french_speech_004_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.french_speech_005_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.french_speech_006_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.french_speech_007_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.french_speech_008_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.french_speech_000_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.french_speech_001_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.french_speech_002_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.french_speech_003_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.french_speech_004_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.french_speech_005_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.french_speech_006_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.french_speech_007_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.french_speech_008_NA_NA.tar.bz2
 
     #German speech set
     #Skip: 004-031
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_000_0.00_3.47.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_001_3.47_3.64.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_002_3.64_3.74.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_003_3.74_3.81.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_000_0.00_3.47.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_001_3.47_3.64.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_002_3.64_3.74.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_003_3.74_3.81.tar.bz2
     #clean_fullband/datasets_fullband.clean_fullband.german_speech_004_3.81_3.86.tar.bz2
     #clean_fullband/datasets_fullband.clean_fullband.german_speech_005_3.86_3.91.tar.bz2
     #clean_fullband/datasets_fullband.clean_fullband.german_speech_006_3.91_3.96.tar.bz2
@@ -84,48 +85,48 @@ BLOB_NAMES=(
     #clean_fullband/datasets_fullband.clean_fullband.german_speech_029_NA_NA.tar.bz2
     #clean_fullband/datasets_fullband.clean_fullband.german_speech_030_NA_NA.tar.bz2
     #clean_fullband/datasets_fullband.clean_fullband.german_speech_031_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_032_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_033_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_034_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_035_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_036_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_037_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_038_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_039_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_040_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_041_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.german_speech_042_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_032_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_033_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_034_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_035_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_036_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_037_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_038_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_039_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_040_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_041_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.german_speech_042_NA_NA.tar.bz2
     
     #Italian speech set
-    #clean_fullband/datasets_fullband.clean_fullband.italian_speech_000_0.00_3.98.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.italian_speech_001_3.98_4.21.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.italian_speech_002_4.21_4.40.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.italian_speech_003_4.40_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.italian_speech_004_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.italian_speech_005_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.italian_speech_000_0.00_3.98.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.italian_speech_001_3.98_4.21.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.italian_speech_002_4.21_4.40.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.italian_speech_003_4.40_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.italian_speech_004_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.italian_speech_005_NA_NA.tar.bz2
     
     #Russian speech set
-    #clean_fullband/datasets_fullband.clean_fullband.russian_speech_000_0.00_4.31.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.russian_speech_001_4.31_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.russian_speech_000_0.00_4.31.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.russian_speech_001_4.31_NA.tar.bz2
 
     #Spanish speech set
     #Skip: 002
-    #clean_fullband/datasets_fullband.clean_fullband.spanish_speech_000_0.00_4.09.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.spanish_speech_001_4.09_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.spanish_speech_000_0.00_4.09.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.spanish_speech_001_4.09_NA.tar.bz2
     #clean_fullband/datasets_fullband.clean_fullband.spanish_speech_002_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.spanish_speech_003_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.spanish_speech_004_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.spanish_speech_005_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.spanish_speech_006_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.spanish_speech_007_NA_NA.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.spanish_speech_008_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.spanish_speech_003_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.spanish_speech_004_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.spanish_speech_005_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.spanish_speech_006_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.spanish_speech_007_NA_NA.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.spanish_speech_008_NA_NA.tar.bz2
     
     #English (VCTK) speech
-    #clean_fullband/datasets_fullband.clean_fullband.vctk_wav48_silence_trimmed_000.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.vctk_wav48_silence_trimmed_001.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.vctk_wav48_silence_trimmed_000.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.vctk_wav48_silence_trimmed_001.tar.bz2
     clean_fullband/datasets_fullband.clean_fullband.vctk_wav48_silence_trimmed_002.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.vctk_wav48_silence_trimmed_003.tar.bz2
-    #clean_fullband/datasets_fullband.clean_fullband.vctk_wav48_silence_trimmed_004.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.vctk_wav48_silence_trimmed_003.tar.bz2
+    clean_fullband/datasets_fullband.clean_fullband.vctk_wav48_silence_trimmed_004.tar.bz2
     
     
     #=====================================================================================

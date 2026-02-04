@@ -70,6 +70,8 @@ for el in os.scandir(same_path):
 #Для Cross
 cross_dict = {}
 for el in os.scandir(cross_path):
+    if el.name == "Train" or el.name == "Test" or el.name == "Div":
+        continue
     key = el.name.split('_')[0]
     cross_dict.setdefault(key, []).append(el)
 

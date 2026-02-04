@@ -17,7 +17,7 @@ from tqdm import tqdm
 
 '''
 Подготовка данных для дальнейшего смешивания.
-Объем данных в папке Processed_DNS ~107GB
+Итоговый объем данных в папке Processed_DNS ~107GB
 '''
 
 #TODO: Определять спикеров с помощью filelists_speakerphone
@@ -45,7 +45,7 @@ russian_speech_path = Path("./datasets_fullband/clean_fullband/russian_speech/M-
                            "ru_RU_47hrs_48k/")
 spanish_speech_path = Path("./datasets_fullband/clean_fullband/spanish_speech/M-AILABS_Speech_Dataset/"
                            "es_ES_16k/")
-vctk_speech_path = "./datasets_fullband/clean_fullband/vctk_wav48_silence_trimmed/"
+vctk_speech_path = Path("./datasets_fullband/clean_fullband/vctk_wav48_silence_trimmed/")
 
 
 
@@ -190,7 +190,7 @@ def process_ailabs(root_path, speech_type, check_for_zeroes=True):
         if dir.name == "mix":
             continue
         for spkr in os.scandir(dir.path):
-            print(f"Process sprk {spkr.name}")
+            print(f"Process spkr {spkr.name}")
             for book_dir in os.scandir(spkr.path):
                 speaker_dict = {}
                 wavs_path = os.path.join(book_dir.path, 'wavs')
@@ -282,10 +282,22 @@ def process_spanish_speech(root_path):
 
     shutil.rmtree(root_path.parent.parent)
 
+def process_english_speech(root_path):
+    process_vctk(root_path)
+
+    shutil.rmtree(root_path)
+
+def is_subset_dir(dir_str):
+    if dir_str=="Train" or dir_str=="Div" or dir_str=="Test":
+        return True
+    else:
+        return False
 
 #Сначала считаем фразы, потом спикеров
 def utter_count(root_path):
     for spkr in os.scandir(root_path):
+        if is_subset_dir(spkr.name):
+            continue
         utt_list = [el for el in os.scandir(spkr.path)]
 
         if (len(utt_list)) < 15:
@@ -317,7 +329,9 @@ def check_spkr_count():
 
     for sp_type in speech_types:
         spkrs = [name for name in os.scandir(sp_type)
-                 if name.is_dir()]
+                 if name.is_dir() and not is_subset_dir(name.name)]
+        if len(spkrs) == 0:
+            continue
 
         if len(spkrs) < 11:
             #Перенести в соотвествующий cross
@@ -325,6 +339,7 @@ def check_spkr_count():
             for spkr in spkrs:
                 for el in os.scandir(spkr):
                     shutil.move(el.path, os.path.join(cross_path, spkr.name))
+
 
             shutil.rmtree(sp_type.path)
 
@@ -338,16 +353,16 @@ def main():
     #Создаем папки, куда все будем записывать
     os.makedirs(res_path + '/Same', exist_ok=True)
     os.makedirs(res_path + '/Cross', exist_ok=True)
-    #process_emotional_speech(emotional_speech_path)
-    #process_french_speech(french_speech_path)
-    #process_german_speech(german_speech_path)
-    #process_italian_speech(italian_speech_path)
-    #process_russian_speech(russian_speech_path)
-    #process_spanish_speech(spanish_speech_path)
-    #process_vctk(vctk_speech_path)
+    process_emotional_speech(emotional_speech_path)
+    process_french_speech(french_speech_path)
+    process_german_speech(german_speech_path)
+    process_italian_speech(italian_speech_path)
+    process_russian_speech(russian_speech_path)
+    process_spanish_speech(spanish_speech_path)
+    process_english_speech(vctk_speech_path)
 
-    #check_utter_count()
-    #check_spkr_count()
+    check_utter_count()
+    check_spkr_count()
 
 if __name__ == "__main__":
     main()
