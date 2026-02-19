@@ -36,6 +36,8 @@
 # Словом Skip помечены разделы и номера файлов, которые не используются при обработке.
 # Их можно не загружать
 
+#Без учета закомментированных файлов
+#требуется ~310 Gb
 BLOB_NAMES=(
     #Emotional speech set
     clean_fullband/datasets_fullband.clean_fullband.emotional_speech_000_NA_NA.tar.bz2
