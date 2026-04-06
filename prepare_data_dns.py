@@ -288,7 +288,7 @@ def process_english_speech(root_path):
     shutil.rmtree(root_path)
 
 def is_subset_dir(dir_str):
-    if dir_str=="Train" or dir_str=="Div" or dir_str=="Test":
+    if dir_str=="Train" or dir_str=="Dev" or dir_str=="Test":
         return True
     else:
         return False

@@ -32,10 +32,10 @@ RIR_SR = 48000
 speech_type = {'Emotional': 2.4, 'French': 62, 'German': 319, 'Italian': 42, 'VCTK': 299+27,
                'Russian': 12, 'Spanish': 65}
 train_len_same = {"Train": (50 * 60 * 60), # Длительность в секундах
-                  "Dev": (2.5 * 60 * 60),
+                  "Dev": (5 * 60 * 60),
                   "Test": (2.5 * 60 * 60)}
 train_len_cross = {"Train": (50 * 60 * 60),
-                   "Dev": (2.5 * 60 * 60),
+                   "Dev": (5 * 60 * 60),
                    "Test": (2.5 * 60 * 60)}
 
 same_path = Path("./Processed_DNS/Same/")
@@ -287,7 +287,7 @@ def process_spkrs(csv_path, sprks_path: str, subset, total_time, rng):
         for el in random_sample_mixtures(speech_dir, rng):
             try:
 
-                if not has_speech_webrtc(el[2], sr=SAMPLERATE) or not has_speech_webrtc(el[3], sr=SAMPLERATE):
+                if not has_speech_silero(el[2], sr=SAMPLERATE) or not has_speech_silero(el[3], sr=SAMPLERATE):
                     #print(f"File {el[2]} have no speech. Skip...")
                     continue
 
@@ -445,6 +445,7 @@ def main(args):
             process_spkrs(csv_path, str(cross_path), subset, time, rng)
 
     os.remove(rng_pkl_path)
+    os.system("sudo shutdown now")
     return
 
 
